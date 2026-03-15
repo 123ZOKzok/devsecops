@@ -1,5 +1,6 @@
 - name: First Playbook
   hosts: all
+  become: true
   tasks:
    - name: create user named zippy1
      user:
