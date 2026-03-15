@@ -1,7 +1,5 @@
 - name: First Playbook
-  hosts: 
-  - webservers
-  - db
+  hosts: all
   tasks:
    - name: create user named zippy1
      user:
