@@ -1,0 +1,7 @@
+apiVersion: awx.ansible.com/v1beta1
+kind: AWX
+metadata:
+  name: awx
+  namespace: default
+spec:
+  service_type: nodeport  # Or "loadbalancer" or "ingress"
