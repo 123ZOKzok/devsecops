@@ -1,0 +1,25 @@
+- name: First Playbook
+  hosts: 
+  - webservers
+  - db
+  tasks:
+   - name: create user named zippy1
+     user:
+       name: zippy1
+       state: present
+   - name: create directory
+     file: 
+       path: /home/zippy1
+       state: directory
+       owner: zippy1
+   - name: run a command
+     command: echo "Hello, World!" > /home/zippy1/hello.txt
+
+      
+- name: web servers
+  hosts: webservers 
+  tasks:
+   - name: install nginx
+     apt: 
+      name: nginx
+      state: present
