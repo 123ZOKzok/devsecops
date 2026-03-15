@@ -4,9 +4,9 @@
   tasks:
    - name: Update all security related packages
      ansible.builtin.package:
-     name: "*"
-     state: latest
-     security: true
+       name: "*"
+       state: latest
+       security: true
    
 
    - name: create a user named zippy2
